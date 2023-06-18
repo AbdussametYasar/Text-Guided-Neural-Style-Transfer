@@ -33,7 +33,7 @@ train_features = np.load("train_features.npy")
 train_labels = np.load("train_labels.npy")
 
 # Load the images
-image_dir = "C:/Users/Samet/Desktop/perseptron/Images/Train"
+image_dir = "../Images/Train"
 dataset = []
 image_files = []
 for subdir, dirs, files in os.walk(image_dir):
@@ -120,7 +120,7 @@ def image_loader(image_name):
 
 
 style_img = image_loader(f"{style_choice}_representative_image.jpg")
-content_img = image_loader("C:/Users/Samet/Desktop/Perseptron Ağlar Proje/images/face.jpg")
+content_img = image_loader("../images/face.jpg")
 
 if style_img.size() != content_img.size():
     image1, image2 = ensure_same_size(content_img, style_img)
